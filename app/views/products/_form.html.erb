@@ -1,18 +1,18 @@
 <%= form_for(@product) do |f| %>
 
-	<div class="field">
+	<div class="form-group">
 		<%= f.label :name %><br/>
 		<%= f.text_field :name %>
 	</div>
-	<div class="field">
+	<div class="form-group">
 		<%= f.label :description %><br/>
-		<%= f.text_field :description %>
+		<%= f.text_field :description%>
 	</div>
-	<div class="field">
+	<div class="form-group">
 		<%= f.label :price_in_cents %><br/>
 		<%= f.number_field :price_in_cents%>
 	</div>
 	<div class="actions">
-		<%= f.submit %>
+		<%= f.submit(class: "btn btn-default") %>
 	</div>
 <% end %>

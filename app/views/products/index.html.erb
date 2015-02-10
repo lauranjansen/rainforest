@@ -1,7 +1,7 @@
 <h1>Products</h1>
 
 <div class="products">
-	<table>
+	<table class="table">
 		<tr>
 			<td>Name</td>
 			<td>Description</td>
@@ -13,8 +13,8 @@
 			<td><%= product.name %></td>
 			<td><%= product.description %></td>
 			<td><%= (product.price_in_cents).to_s %></td>
-			<td><%= link_to "Show", product_path(product) %>
-				<%= link_to "Edit", edit_product_path(product) %>
+			<td><%= link_to "Show", product_path(product) %> |
+				<%= link_to "Edit", edit_product_path(product) %> |
 				<%= link_to "Delete", product, method: :delete %></td>
 		</tr>
 	<% end %>
