@@ -15,7 +15,18 @@
 			<p id="alert"><%= flash[:alert] %></p>
 	<% end %>
 
-<%= yield %>
+	<%= yield %>
+
+	<p class="userinfo">
+		<% if current_user %>
+			Signed in as <%= current_user.email %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+		<% else %>
+			<% unless (controller_name == "sessions" && action_name == "new") %>
+				<%= link_to "Log in", new_session_path %> or
+			<% end %>
+			<%= link_to "Sign up", new_user_path %>
+		<% end %>
+	</p>
 
 </body>
 </html>

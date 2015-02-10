@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 # Bootstrap HOOOOOO!
 gem 'bootstrap-sass'
-
+gem 'pry-rails'
+gem 'quiet_assets'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
