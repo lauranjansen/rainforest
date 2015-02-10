@@ -5,14 +5,14 @@
 		<tr>
 			<td>Name</td>
 			<td>Description</td>
-			<td>Price in Cents</td>
+			<td>Price</td>
 			<td>Actions</td>
 		</tr>
 		<% @products.each do |product| %>
 		<tr>
 			<td><%= product.name %></td>
 			<td><%= product.description %></td>
-			<td><%= (product.price_in_cents).to_s %></td>
+			<td>$<%= product.formatted_price %></td>
 			<td><%= link_to "Show", product_path(product) %> |
 				<%= link_to "Edit", edit_product_path(product) %> |
 				<%= link_to "Delete", product, method: :delete %></td>
